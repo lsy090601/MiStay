@@ -1,0 +1,62 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 2px solid #D6E8E0;
+  box-shadow: 0 2px 12px rgba(18,91,67,0.06);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-family: 'Paperlogy', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: #125B43;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.link {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.link:hover { background: var(--bg); color: #125B43; }
+.active { background: #E8F5EF; color: #125B43; }
+
+.adminLink { color: #F97316; }
+.adminLink.active { background: #FFF7ED; color: #F97316; }
+
+.logoutBtn {
+  padding: 9px 20px;
+  background: none;
+  border: 2px solid #C0CFCA;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.logoutBtn:hover { border-color: #EF4444; color: #EF4444; background: #FEF2F2; }

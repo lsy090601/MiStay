@@ -1,18 +1,17 @@
 :root {
-  --primary: #3B82F6;
-  --primary-dark: #1D4ED8;
-  --primary-light: #EFF6FF;
-  --bg: #F3F4F6;
+  --primary: #44A786;
+  --primary-dark: #377E66;
+  --primary-light: #F2F8F6;
+  --text: #1a2e28;
+  --text-muted: #6b8a7e;
+  --bg: #F2F8F6;
   --surface: #FFFFFF;
-  --text: #111827;
-  --text-muted: #6B7280;
-  --border: #E5E7EB;
+  --border: #D6E8E0;
   --error: #EF4444;
   --error-bg: #FEF2F2;
   --success: #22C55E;
-  --warning: #F59E0B;
 
-  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
+  font-family: 'Paperlogy', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif;
   font-size: 16px;
   color: var(--text);
   background: var(--bg);
@@ -27,30 +26,14 @@
 
 body {
   min-height: 100dvh;
-  background: var(--bg);
+  background: linear-gradient(180deg, #F2F8F6 0%, #F3FFFB 100%);
 }
 
 #root {
   width: 100%;
-  max-width: 430px;
   min-height: 100dvh;
-  margin: 0 auto;
-  background: var(--bg);
-  position: relative;
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  font-family: inherit;
-}
-
-input {
-  font-family: inherit;
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
+button { cursor: pointer; border: none; font-family: inherit; }
+input  { font-family: inherit; font-size: 16px; }
+a      { text-decoration: none; color: inherit; }

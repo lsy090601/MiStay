@@ -1,52 +1,104 @@
 /* 공통 레이아웃 */
-.page {
-  padding: 24px 20px;
-  min-height: 100dvh;
+.pageWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 40px;
 }
 
-/* 공통 버튼 */
+.pageTitle {
+  font-size: 32px;
+  font-weight: 900;
+  color: #125B43;
+  letter-spacing: 0.03em;
+  margin-bottom: 32px;
+}
+
+/* 카드 */
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 2px 16px rgba(18,91,67,0.07);
+}
+
+/* 버튼 */
 .btn-primary {
-  width: 100%;
-  padding: 14px;
+  padding: 14px 32px;
   background: var(--primary);
   color: #fff;
   font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 2px solid var(--primary-dark);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover   { background: var(--primary-dark); }
+.btn-primary:disabled { background: #88C9B3; border-color: #88C9B3; cursor: not-allowed; }
+
+.btn-secondary {
+  padding: 14px 32px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 16px;
   font-weight: 600;
   border-radius: 12px;
+  border: 2px solid var(--border);
   transition: background 0.2s;
+  cursor: pointer;
 }
-.btn-primary:hover { background: var(--primary-dark); }
-.btn-primary:disabled { background: #93C5FD; cursor: not-allowed; }
+.btn-secondary:hover { background: var(--bg); }
 
-/* 공통 인풋 */
+/* 인풋 */
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 .input-group label {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 700;
+  color: #125B43;
+  letter-spacing: 0.03em;
 }
-.input-group input {
-  padding: 13px 14px;
-  border: 1.5px solid var(--border);
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 14px 16px;
+  border: 3px solid #C0CFCA;
   border-radius: 10px;
   font-size: 16px;
   color: var(--text);
-  background: var(--surface);
+  background: #fff;
   outline: none;
   transition: border-color 0.2s;
+  width: 100%;
 }
-.input-group input:focus { border-color: var(--primary); }
-.input-group input::placeholder { color: #D1D5DB; }
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus { border-color: var(--primary); }
+.input-group input::placeholder { color: #C0CFCA; }
 
-/* 에러 메시지 */
+/* 에러 */
 .error-msg {
-  padding: 12px 14px;
+  padding: 14px 18px;
   background: var(--error-bg);
   border-radius: 10px;
   color: var(--error);
   font-size: 14px;
 }
+
+/* 성공 */
+.success-msg {
+  padding: 14px 18px;
+  background: #F0FDF4;
+  border-radius: 10px;
+  color: var(--success);
+  font-size: 14px;
+}
+
+/* 배지 */
+.badge-blue  { background: #EFF6FF; color: #3B82F6; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.badge-green { background: #F0FDF4; color: #22C55E; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.badge-red   { background: #FEF2F2; color: #EF4444; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.badge-orange{ background: #FFF7ED; color: #F97316; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }

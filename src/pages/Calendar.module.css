@@ -1,252 +1,96 @@
-.container {
-  min-height: 100dvh;
-  background: var(--bg);
-  padding-bottom: 80px;
-}
+.page { min-height: calc(100dvh - 68px); }
 
-.header {
-  padding: 52px 20px 16px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-}
-.title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-/* 월 이동 */
-.monthNav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  background: var(--surface);
-}
-.monthLabel {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text);
-}
-.navBtn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--text-muted);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.navBtn:hover { background: var(--bg); }
-
-/* 요일 */
-.dayHeaders {
+.layout {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 0 4px;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+.calCard { padding: 28px; }
+
+.monthNav {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.monthLabel { font-size: 20px; font-weight: 900; color: #125B43; }
+.navBtn {
+  background: var(--bg); border: none; font-size: 22px;
+  width: 40px; height: 40px; border-radius: 10px;
+  color: var(--text-muted); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.navBtn:hover { background: #D6EFE5; color: #125B43; }
+
+.dayHeaders {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 8px;
 }
 .dayLabel {
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  padding: 8px 0;
+  text-align: center; font-size: 13px; font-weight: 700;
+  color: var(--text-muted); padding: 8px 0;
 }
 .sun { color: #EF4444; }
 .sat { color: #3B82F6; }
 
-/* 날짜 그리드 */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  background: var(--surface);
-  padding: 4px;
-  gap: 2px;
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
 }
 .cell {
   aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4px 2px;
-  border-radius: 8px;
-  cursor: pointer;
-  min-height: 44px;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 6px 4px; border-radius: 10px; cursor: default;
+  min-height: 60px;
 }
-.cell:hover { background: var(--bg); }
-.today { background: var(--primary-light); }
+.hasEvent { cursor: pointer; }
+.hasEvent:hover { background: var(--bg); }
+.today { background: #E8F5EF; }
 
-.dayNum {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1;
-}
-.today .dayNum {
-  color: var(--primary);
-  font-weight: 700;
-}
+.dayNum { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1; }
+.today .dayNum { color: #125B43; font-weight: 900; }
 
-.dots {
-  display: flex;
-  gap: 2px;
-  margin-top: 3px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-}
+.dots { display: flex; gap: 3px; margin-top: 5px; flex-wrap: wrap; justify-content: center; }
+.dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
 
-/* 범례 */
 .legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  padding: 12px 16px;
-  background: var(--surface);
+  display: flex; flex-wrap: wrap; gap: 12px 24px;
+  padding-top: 20px; margin-top: 16px;
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  margin-top: 2px;
 }
-.legendItem {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: var(--text-muted);
-}
-.legendDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
+.legendItem { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); }
+.legendDot { width: 9px; height: 9px; border-radius: 50%; }
 
-/* 일정 목록 */
-.scheduleList {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  background: var(--surface);
-  margin: 12px 16px;
-  border-radius: 14px;
-  overflow: hidden;
-}
-.listTitle {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
+/* 사이드바 */
+.sidebar {}
+.sideTitle { font-size: 16px; font-weight: 900; color: #125B43; margin-bottom: 16px; }
+.emptyTxt { font-size: 14px; color: var(--text-muted); padding: 12px 0; }
+.scheduleList { display: flex; flex-direction: column; }
 .scheduleItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0; border-bottom: 1px solid var(--border); cursor: pointer;
 }
 .scheduleItem:last-child { border-bottom: none; }
-.scheduleDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.scheduleName {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-}
-.scheduleDate {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-.essentialTag {
-  margin-left: auto;
-  font-size: 10px;
-  font-weight: 700;
-  background: #FEE2E2;
-  color: #EF4444;
-  padding: 2px 8px;
-  border-radius: 4px;
-  flex-shrink: 0;
-}
+.scheduleItem:hover { opacity: 0.75; }
+.scheduleLeft { display: flex; align-items: center; gap: 10px; }
+.scheduleTitle { font-size: 14px; font-weight: 600; color: var(--text); }
+.scheduleDate  { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
 /* 모달 */
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 200;
+  position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+  display: flex; align-items: center; justify-content: center; z-index: 200;
 }
 .modal {
-  background: var(--surface);
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  max-width: 430px;
-  padding: 24px 20px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  background: var(--surface); border-radius: 20px;
+  width: 480px; padding: 36px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  display: flex; flex-direction: column; gap: 16px;
 }
-.modalHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.modalTitle {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-}
-.closeBtn {
-  background: none;
-  border: none;
-  font-size: 18px;
-  color: var(--text-muted);
-  cursor: pointer;
-}
-.modalItem {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 14px;
-  background: var(--bg);
-  border-radius: 12px;
-}
-.modalItemHeader {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  color: var(--text);
-}
-.modalDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.modalDesc {
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-.modalMeta {
-  font-size: 12px;
-  color: var(--text-muted);
-}
+.modalHeader { display: flex; justify-content: space-between; align-items: center; }
+.modalTitle { font-size: 18px; font-weight: 900; color: #125B43; }
+.closeBtn { background: none; border: none; font-size: 20px; color: var(--text-muted); cursor: pointer; }
+.modalItem { background: var(--bg); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.modalItemTop { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: var(--text); }
+.modalDesc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.modalMeta { font-size: 13px; color: var(--text-muted); }
