@@ -1,0 +1,154 @@
+.container {
+  min-height: 100dvh;
+  background: var(--bg);
+  padding-bottom: 80px;
+}
+
+.header {
+  padding: 52px 20px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.emptyBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  gap: 12px;
+}
+.emptyIcon { font-size: 48px; }
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.listWrap {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.monthLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.group {
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  cursor: pointer;
+}
+.item:last-child { border-bottom: none; }
+
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.itemType {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+.itemDate {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.arrow {
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+/* 상태 배지 */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  width: fit-content;
+}
+.blue  { background: #EFF6FF; color: #3B82F6; }
+.green { background: #F0FDF4; color: #22C55E; }
+.red   { background: #FEF2F2; color: #EF4444; }
+
+/* 모달 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 200;
+}
+.modal {
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 430px;
+  padding: 24px 20px 48px;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.modalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.detailRow:last-child { border-bottom: none; }
+.detailLabel {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.detailValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}

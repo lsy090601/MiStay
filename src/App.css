@@ -1,0 +1,52 @@
+/* 공통 레이아웃 */
+.page {
+  padding: 24px 20px;
+  min-height: 100dvh;
+}
+
+/* 공통 버튼 */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-primary:disabled { background: #93C5FD; cursor: not-allowed; }
+
+/* 공통 인풋 */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.input-group input {
+  padding: 13px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-group input:focus { border-color: var(--primary); }
+.input-group input::placeholder { color: #D1D5DB; }
+
+/* 에러 메시지 */
+.error-msg {
+  padding: 12px 14px;
+  background: var(--error-bg);
+  border-radius: 10px;
+  color: var(--error);
+  font-size: 14px;
+}

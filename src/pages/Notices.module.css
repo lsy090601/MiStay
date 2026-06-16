@@ -1,0 +1,139 @@
+.container {
+  min-height: 100dvh;
+  background: var(--bg);
+  padding-bottom: 80px;
+}
+
+.header {
+  padding: 52px 20px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.emptyBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  gap: 12px;
+}
+.emptyIcon { font-size: 48px; }
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+  padding: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  width: 100%;
+  background: var(--surface);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 20px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.item:hover { background: var(--bg); }
+
+.itemTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pinnedBadge {
+  display: inline-block;
+  background: #FEE2E2;
+  color: #EF4444;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.itemTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemDate {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* 모달 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 200;
+}
+.modal {
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 430px;
+  padding: 24px 20px 48px;
+  max-height: 80dvh;
+  overflow-y: auto;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.modalTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 6px 0 4px;
+  line-height: 1.4;
+}
+.modalDate {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 16px;
+}
+.modalContent {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
